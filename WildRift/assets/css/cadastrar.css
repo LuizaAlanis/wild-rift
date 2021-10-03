@@ -1,0 +1,150 @@
+:root{
+    /* Cores Base */
+    --bg-primary:#FFF;
+    --bg-secondary:#111111;
+    --primary-color:#32C8FF;
+    --secondary-color:#141E37;
+    --silver:#C2C2C2;
+    --dim-grey:#575757;
+
+    /* Gradients */
+    --blue-to-purple: 90deg, #5729DB, #6E87FF;
+    --purple-to-pink: 90deg, #c83a5c, #ff5f5f;
+
+    /* Fontes e texto */
+    --fonte-base: 'Roboto', sans-serif;
+    --fonte-destaque: 'Oswald', sans-serif;
+    --tamanho-padrao: clamp(1em, 1.2em, 1.5em); /* mínimo, desejável, máximo */
+    --tamanho-destaque: 3.5em; 
+    --texto-pequeno: 0.8em;
+
+    /* Configuração para telas pequenas */
+    --tamanho-responsivo: 2.5em; /*do texto em destaque*/
+
+}
+
+.container-formulario{
+    background-image: linear-gradient(var(--purple-to-pink));
+    padding: 10vh 0;
+    width: 100%;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    color: var(--bg-primary);
+}
+
+.input-text{
+    width: 270px;
+    height: 35px;
+    padding-left: 10px;
+    border-radius: 0;
+    outline: none;
+    border: solid 2px var(--bg-primary);
+    background-color: transparent;
+    color: var(--bg-primary);
+}
+
+.input-text::placeholder{
+    color: var(--bg-primary);
+    opacity: 0.7;
+}
+
+
+.form{
+    border-right: solid 2px var(--bg-primary);
+    border-bottom: solid 2px var(--bg-primary);
+    padding: 30px;
+}
+
+.titulo-cadastro{
+    color: var(--bg-primary);
+    text-transform: uppercase;
+    font-family: var(--fonte-destaque);
+    font-size: var(--tamanho-destaque);
+    font-style: italic;
+    position: absolute;
+    top: 100px;
+    left: 120px;
+    font-weight: bold;
+}
+
+.detalhe-cadastro{
+    clip-path: polygon(45% 88%, 49% 95%, 100% 95%, 100% 100%, 0 100%, 0 88%);
+    height: 50px;
+    width: 200px;
+    background-color: var(--bg-primary);
+}
+
+.button{
+    background-color: transparent;
+    width: 270px;
+    height: 35px;
+    border: none;
+    margin-top: 5px;
+    border-radius: 0;
+    border: solid 2px var(--bg-primary);
+    font-family: var(--fonte-destaque);
+    color: var(--bg-primary);
+    font-weight: bold;
+    font-style: italic;
+    text-transform: uppercase;
+    font-size: 0.9em;
+    letter-spacing: 0.3px;
+}
+
+.button:hover{
+    cursor: pointer;
+    background-color: var(--bg-primary);
+    transition: all 0.3s ease-in-out 0s;
+    color: var(--secondary-color);
+}
+
+/* CHECKBOX*/
+
+.checkbox-container{
+    display: block;
+}
+
+/*
+
+.checkbox{
+    display: block;
+    position: relative;
+    padding-left: 45px;
+    margin-bottom: 12px;
+    cursor: pointer;
+}
+
+.checkbox input{
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.check{
+    left: 0;
+    top: 0;
+    width: 15px;
+    height: 15px;
+    background-color: var(--bg-primary);
+    opacity: 0.3;
+    transform: rotate(45deg);
+    position: absolute;
+}
+
+.checkbox input:checked .check{
+    opacity: 1;
+}
+
+*/
+
+@media only screen and (max-width: 1200px) {
+    
+    .titulo-cadastro{
+        font-size: var(--tamanho-responsivo);
+        position: relative;
+        top: 10px;
+        left: 10px;
+    }
+
+}

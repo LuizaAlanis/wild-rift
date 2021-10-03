@@ -1,0 +1,373 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald&family=Roboto:wght@300;400;500&display=swap');
+
+:root{
+    /* Cores Base */
+    --bg-primary:#FFF;
+    --bg-secondary:#111111;
+    --primary-color:#32C8FF;
+    --secondary-color:#141E37;
+    --silver:#C2C2C2;
+    --dim-grey:#575757;
+
+    /* Gradients */
+    --blue-to-purple: 90deg, #5729DB, #6E87FF;
+
+    /* Fontes e texto */
+    --fonte-base: 'Roboto', sans-serif;
+    --fonte-destaque: 'Oswald', sans-serif;
+    --tamanho-padrao: clamp(1em, 1.2em, 1.5em); /* mínimo, desejável, máximo */
+    --tamanho-destaque: 4em; 
+    --texto-pequeno: 0.8em;
+
+    /* Configuração para telas pequenas */
+    --tamanho-responsivo: 2.5em; /*do texto em destaque*/
+
+}
+
+nav{
+    font-size: 0.7em;
+    letter-spacing: 0.1em;
+    font-weight: bold;
+    background-color: var(--bg-secondary);
+    color: var(--bg-primary);
+    text-transform: uppercase;
+    height: 90px;
+    display: flex;
+    align-items: center;
+    justify-content:left;
+    width: 94%;
+    padding: 0 3%;
+}
+
+.logo-riot{
+    background-color: var(--bg-primary);
+    height: 40px;
+    width: 40px;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50px;
+}
+
+.logo{
+    padding-left: 40px;
+    max-width: 40px;
+}
+
+.logo-riot img{
+    max-width: 20px;
+}
+
+nav ul li{
+    padding-left: 40px;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+
+.combobox{
+    display: none;
+}
+
+body::-webkit-scrollbar {
+    width: 0.25rem;
+}
+
+body::-webkit-scrollbar-track {
+    background: var(--bg-primary);
+}
+
+body::-webkit-scrollbar-thumb {
+    background: var(--primary-color);
+}
+
+body{
+    font-family: var(--fonte-base);
+    font-size: var(--tamanho-padrao);
+    
+}
+
+.uppercase{
+    text-transform: uppercase;
+}
+
+.container-gradient{
+    min-height:30vh;
+    width: 100%;
+    background: -moz-linear-gradient(var(--blue-to-purple));
+    background: -webkit-linear-gradient(var(--blue-to-purple));
+    background: linear-gradient(var(--blue-to-purple));
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#5729db",endColorstr="#6e87ff",GradientType=1);
+}
+
+.texto-destaque{
+    font-family: var(--fonte-destaque);
+    font-size: var(--tamanho-destaque);
+    font-style: italic;
+    text-transform: uppercase;
+    font-weight: bolder;
+}
+
+.claro{
+    color: var(--bg-primary);
+}
+
+.escuro{
+    color: var(--secondary-color);
+}
+
+/* Footer */
+
+footer{
+    font-size: var(--texto-pequeno);
+    min-height: 30vh;
+    width: 100%;
+    background-color: var(--bg-secondary);
+    color: var(--dim-grey);
+    display: flex;
+    justify-content: center;
+    font-size: 0.7em;
+}
+
+.footer-container{
+    max-width: 500px;
+    text-align: center;
+    margin: 30px 0 200px 0;
+    padding: 30px;
+}
+
+.footer-social .bi{
+    margin: 0 15px;
+    font-size: 1.5em;
+}
+
+.footer-social .bi:hover{
+    color: var(--bg-primary);
+    transition: 0.4s;
+}
+
+#texto-torneios{
+    font-size: 0.7em;
+    font-weight: 600;
+    letter-spacing: 0.2em;
+}
+
+#texto-copy{
+    font-size: 0.8em;
+    margin: 40px 0;
+}
+
+footer div ul li{
+    font-size: 0.7em;
+    display: inline-block;
+    padding: 5px;
+    text-decoration: underline;
+}
+
+/* Footer */
+
+.banner{
+    width: 100%;
+    height: 100vh;
+    background-image: url(../images/splash-art/wild-rift.jpg);
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.stores{
+    z-index: 1;
+}
+
+.stores a img{
+    max-width: 120px;
+    height: 40px;
+}
+
+/* Navbar */
+
+nav ul li{
+    display: inline-block;
+}
+
+.container-campeao{
+    padding: 7vw;
+}
+
+.filtros ul{
+    display: inline;
+}
+
+.filtros ul li{
+    display: inline-block;
+}
+
+.filtros{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: solid 1px var(--secondary-color);
+    margin-top: 60px;
+    height: 53px;
+}
+
+.funcoes, .dificuldades{
+    width: 30px;
+    max-height: 45px;
+}   
+
+.funcoes{
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content:space-evenly;
+}
+
+.funcoes ul li{
+    font-size: 0.7em;
+    padding: 0 20px;
+    color: var(--dim-grey);
+}
+
+/* linha */
+
+
+  .c-navigation__item a {
+    position: relative;
+    padding: 1.1rem 0.5rem; /* o primeiro valor vai atribuir o espaço entre a linha e o link*/
+  }
+  .c-navigation__item a:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 5px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: var(--primary-color);
+    visibility: hidden;
+    transform: scaleX(0);
+    transition: all 0.3s ease-in-out 0s;
+  }
+  .c-navigation__item:hover a:hover:before {
+    visibility: visible;
+    transform: scaleX(1);
+  }
+
+  /* linha */
+
+
+.dificuldades{
+    width: 20%;
+    display: flex;
+}
+
+.forma{
+    clip-path: polygon(0 0, 23% 0, 23% 100%, 12% 100%, 12% 73%, 0 70%);
+    background-color: var(--secondary-color);
+    height: 140px;
+    width: 30px;
+    margin: 0;
+    padding: 0;
+}
+
+.caption{
+    display: flex;
+}
+
+.plus{
+	margin-top: 40px;
+	max-width: 500px;
+}
+
+
+
+
+/* Cards dos campeões */
+
+.cards-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 30px;
+}
+
+.cd-champion{
+    clip-path: polygon(50% 0, 55% 2%, 100% 2%, 100% 93%, 93% 100%, 0 100%, 0 0);
+    background-color: var(--primary-color);
+    height: calc(100vw * 5 / 16); /* Calculando a altura com base na largura*/
+    padding-top: 3%;
+    display: block;
+}
+
+.cd-champion:hover{
+    clip-path: polygon(50% 0, 55% 2%, 100% 2%, 100% 100%, 0 100%, 0 0);
+    transition: all 0.5s ease; 
+    cursor: pointer;
+}
+
+.cd-champion:hover .ch-name{
+    background-color: var(--secondary-color);
+    transition: 0.3s ease-in-out 0s;
+}
+
+.cd-champion:hover .cd-image img{
+    transform: scale(1.2);
+    transition: all 0.3s ease-in-out 0s;
+}
+
+.cd-image{
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    height: 85%;
+    width: 100%;
+    background-color: var(--silver);
+}
+
+.ch-name{
+    height: 15%;
+    width: 100%;
+    padding-left: 20px;
+    display: flex;
+    align-items: center;
+    justify-content:left;
+    text-transform: uppercase;
+    font-family: var(--fonte-destaque);
+    font-weight: bolder;
+    font-style: italic;
+    color: var(--bg-primary);
+}
+
+.cd-image img{
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+/* Telas pequenas */
+
+@media only screen and (max-width: 1000px) {
+    /* Ajustando as colunas*/
+    .cards-container{
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .cd-champion{
+        height: calc(100vw * 9 / 16); /* Calculando a altura com base na largura*/
+        padding-top: 2.5%;
+    }
+
+    /* Ajustando o tamanho da fonte */
+    .texto-destaque{
+        font-size: var(--tamanho-responsivo);
+    }
+
+    /* Ajustando o padding do container */
+    .container-campeao{
+        padding: 3vh;
+    }
+}
+
+/* Telas pequenas */
+
+/* Cards dos campeões */
+
